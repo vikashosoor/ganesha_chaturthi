@@ -1,0 +1,1140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ganesh Chaturthi — The Form and Cycle</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --gold:#c98a2e;
+    --vermillion:#b23c2e;
+    --leaf-deep:#2b4a34;
+    --leaf-mid:#7c9473;
+    --indigo:#17182b;
+    --amber:#e0a72c;
+    --violet:#8073b8;
+    --dusk:#2b2333;
+    --copper:#cf8f63;
+    --sage:#8aa899;
+    --lav:#c9b9c4;
+    --paper:#f3efe0;
+    --ink:#241a10;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    font-family:'Work Sans', sans-serif;
+    background:var(--paper);
+    color:var(--ink);
+    font-size:18px;
+    line-height:1.7;
+  }
+  h1,h2,h3,h4{
+    font-family:'Fraunces', serif;
+    font-weight:500;
+    margin:0;
+  }
+  p{margin:0 0 1.3em 0; max-width:62ch;}
+  .wrap{max-width:1040px; margin:0 auto; padding:0 32px;}
+  .center{margin-left:auto;margin-right:auto;}
+
+  /* ---------- HERO ---------- */
+  .hero{
+    position:relative;
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    background:
+      radial-gradient(ellipse at 20% 15%, rgba(201,138,46,0.35), transparent 55%),
+      radial-gradient(ellipse at 85% 20%, rgba(124,148,115,0.30), transparent 50%),
+      radial-gradient(ellipse at 50% 90%, rgba(207,143,99,0.26), transparent 55%),
+      var(--indigo);
+    color:#f1ecdc;
+    padding:120px 32px 100px;
+    overflow:hidden;
+  }
+  .hero-eyebrow-motif{
+    display:flex;
+    gap:14px;
+    margin-bottom:34px;
+  }
+  .hero-eyebrow-motif span{
+    width:9px; height:9px; border-radius:50%;
+  }
+  .hero-eyebrow-motif span:nth-child(1){background:var(--gold);}
+  .hero-eyebrow-motif span:nth-child(2){background:var(--leaf-mid);}
+  .hero-eyebrow-motif span:nth-child(3){background:var(--copper);}
+  .hero h1{
+    font-size:clamp(2.6rem, 6vw, 4.6rem);
+    line-height:1.05;
+    letter-spacing:-0.01em;
+    max-width:14ch;
+  }
+  .hero .tagline{
+    margin-top:20px;
+    font-family:'Fraunces', serif;
+    font-style:italic;
+    font-size:1.3rem;
+    font-weight:400;
+    color:var(--amber);
+    letter-spacing:0.01em;
+  }
+  .hero .subtitle{
+    margin-top:20px;
+    font-size:1.2rem;
+    font-weight:300;
+    color:#cfc9e0;
+    max-width:46ch;
+  }
+  .hero-worlds{
+    margin-top:64px;
+    display:flex;
+    gap:36px;
+    flex-wrap:wrap;
+    justify-content:center;
+    font-family:'Fraunces', serif;
+    font-size:0.95rem;
+  }
+  .hero-worlds div{
+    padding:10px 22px;
+    border:1px solid rgba(255,255,255,0.22);
+    border-radius:999px;
+  }
+  .hero-worlds .w1{color:var(--gold); border-color:rgba(201,138,46,0.5);}
+  .hero-worlds .w2{color:#a9c19f; border-color:rgba(124,148,115,0.5);}
+  .hero-worlds .w3{color:var(--copper); border-color:rgba(207,143,99,0.5);}
+
+  /* ---------- CHAPTER SHELL ---------- */
+  .chapter{padding:120px 0 130px; position:relative;}
+  .chapter-head{margin-bottom:64px;}
+  .chapter-tag{
+    font-family:'Fraunces', serif;
+    letter-spacing:0.02em;
+    margin-bottom:14px;
+  }
+  .chapter-tag .tag-main{
+    font-size:1.6rem;
+    font-weight:600;
+  }
+  .chapter-tag .tag-sub{
+    font-size:1rem;
+    opacity:0.65;
+    font-style:italic;
+    margin-left:2px;
+  }
+  .chapter-title{font-size:clamp(2.1rem, 4.4vw, 3.2rem); max-width:16ch;}
+  .lede{font-size:1.25rem; font-weight:300; max-width:52ch; margin-top:22px;}
+
+  /* Chapter I — Loukika (gathering) */
+  .ch1{background:linear-gradient(180deg, #efe0c8 0%, #eddcc0 100%); color:var(--ink);}
+  .ch1 .chapter-tag{color:var(--vermillion);}
+
+  .weave{
+    display:grid;
+    grid-template-columns:repeat(2, 1fr);
+    gap:2px;
+    background:rgba(36,26,16,0.12);
+    border:1px solid rgba(36,26,16,0.12);
+    margin:56px 0;
+  }
+  .weave .cell{
+    background:#f6ecd9;
+    padding:34px 32px;
+  }
+  .weave .cell h3{font-size:1.15rem; color:var(--vermillion); margin-bottom:10px; font-weight:600;}
+  .weave .cell p{margin:0; font-size:0.98rem; max-width:none;}
+
+  .roles{
+    margin:56px 0;
+    display:grid;
+    grid-template-columns:1px 1fr;
+    column-gap:28px;
+  }
+  .roles .rail{
+    grid-column:1;
+    grid-row:1 / span 20;
+    background:rgba(178,60,46,0.35);
+    width:1px;
+  }
+  .role{
+    position:relative;
+    padding:0 0 30px 0;
+  }
+  .role::before{
+    content:"";
+    position:absolute;
+    left:-33px; top:6px;
+    width:9px; height:9px;
+    border-radius:50%;
+    background:var(--vermillion);
+  }
+  .role strong{display:block; font-family:'Fraunces',serif; font-size:1.08rem; margin-bottom:4px;}
+
+  blockquote.pull{
+    margin:64px 0 0 0;
+    padding:36px 40px;
+    background:var(--ink);
+    color:#f1e7d2;
+    border-radius:2px;
+    font-family:'Fraunces', serif;
+    font-size:1.35rem;
+    font-weight:400;
+    line-height:1.5;
+  }
+  blockquote.pull span{
+    display:block;
+    margin-top:16px;
+    font-family:'Work Sans', sans-serif;
+    font-size:0.85rem;
+    font-weight:400;
+    color:#b7a98a;
+  }
+
+  .ch1-sub{
+    font-family:'Fraunces', serif;
+    font-size:1.55rem;
+    margin:78px 0 8px;
+    color:var(--ink);
+  }
+  .ch1-sub-note{
+    font-size:1.02rem;
+    font-weight:300;
+    max-width:56ch;
+    margin-bottom:30px;
+    color:#4a3a26;
+  }
+
+  .progression{
+    display:flex;
+    flex-wrap:wrap;
+    align-items:center;
+    gap:10px;
+    margin:36px 0 44px;
+    font-family:'Fraunces', serif;
+  }
+  .progression .step{
+    padding:10px 20px;
+    background:#f6ecd9;
+    border:1px solid rgba(178,60,46,0.3);
+    color:var(--vermillion);
+    font-size:1rem;
+  }
+  .progression .arrow{color:rgba(36,26,16,0.35); font-size:1.1rem;}
+
+  .taglist{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    margin:28px 0 36px;
+  }
+  .taglist span{
+    padding:8px 16px;
+    border:1px solid rgba(36,26,16,0.22);
+    border-radius:999px;
+    font-size:0.88rem;
+    color:#4a3a26;
+    background:rgba(246,236,217,0.6);
+  }
+
+  .small-quote{
+    margin:40px 0;
+    padding:22px 28px;
+    border-left:3px solid var(--vermillion);
+    font-family:'Fraunces', serif;
+    font-size:1.15rem;
+    font-style:italic;
+    color:#3a2c19;
+    max-width:56ch;
+  }
+
+  /* Chapter II — Bhoutika (wilderness) */
+  .ch2{background:var(--leaf-deep); color:#eef1e6;}
+  .ch2 .chapter-tag{color:#b7cf9e;}
+  .ch2 .lede{color:#d8dfcb;}
+
+  .web-diagram{
+    margin:56px 0 64px;
+    display:flex;
+    flex-wrap:wrap;
+    gap:14px;
+  }
+  .web-diagram .node{
+    flex:1 1 200px;
+    border:1px solid rgba(238,241,230,0.22);
+    padding:20px 22px;
+    font-size:0.95rem;
+    color:#cfd8c2;
+  }
+  .web-diagram .node b{
+    display:block;
+    font-family:'Fraunces', serif;
+    color:#eef1e6;
+    font-size:1.05rem;
+    margin-bottom:6px;
+  }
+
+  .subsection-title{
+    font-family:'Fraunces', serif;
+    font-size:1.7rem;
+    margin:80px 0 10px;
+    color:#eef1e6;
+  }
+  .subsection-note{
+    max-width:60ch;
+    color:#c3cdb5;
+    font-size:1.02rem;
+    margin-bottom:36px;
+  }
+
+  .plant-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fill, minmax(270px, 1fr));
+    gap:14px;
+  }
+  .plant-card{
+    background:rgba(238,241,230,0.05);
+    border:1px solid rgba(238,241,230,0.14);
+    padding:20px 20px 22px;
+    transition:border-color 0.2s ease, background 0.2s ease;
+  }
+  .plant-card:hover{
+    border-color:rgba(238,241,230,0.4);
+    background:rgba(238,241,230,0.09);
+  }
+  .plant-card .num{
+    font-family:'Fraunces', serif;
+    font-size:0.85rem;
+    color:#8fae74;
+    margin-bottom:10px;
+  }
+  .plant-card .glyph{
+    font-size:1.4rem;
+    margin-bottom:10px;
+    display:block;
+  }
+  .plant-card .name{
+    font-family:'Fraunces', serif;
+    font-size:1.08rem;
+    color:#eef1e6;
+    margin-bottom:4px;
+  }
+  .plant-card .botanical{
+    font-style:italic;
+    font-size:0.85rem;
+    color:#a9b89a;
+  }
+  .plant-note{
+    margin-top:38px;
+    font-size:0.92rem;
+    color:#9cab8c;
+    max-width:62ch;
+    border-top:1px solid rgba(238,241,230,0.14);
+    padding-top:20px;
+  }
+
+  .plant-card .dual{
+    font-size:0.86rem;
+    line-height:1.55;
+    margin:0 0 10px 0;
+    color:#c3cdb5;
+    max-width:none;
+  }
+  .plant-card .dual:last-child{margin-bottom:0;}
+  .plant-card .dual strong{
+    display:block;
+    font-family:'Fraunces', serif;
+    font-style:normal;
+    font-size:0.78rem;
+    letter-spacing:0.02em;
+    color:#8fae74;
+    margin-bottom:2px;
+  }
+
+  .flow-row{
+    display:flex;
+    flex-wrap:wrap;
+    align-items:center;
+    gap:10px;
+    margin:14px 0;
+    font-family:'Fraunces', serif;
+    font-size:0.98rem;
+  }
+  .flow-row span{color:#dbe3cf;}
+  .flow-row span.arrow{color:#5f7350; font-size:0.9rem;}
+  .flow-row strong{
+    color:var(--amber);
+    font-weight:500;
+  }
+
+  .idol-flow{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+    margin:44px 0 10px;
+  }
+  .idol-flow .stage{
+    flex:1 1 170px;
+    background:rgba(238,241,230,0.05);
+    border:1px solid rgba(238,241,230,0.14);
+    padding:20px 18px;
+  }
+  .idol-flow .stage .t{
+    font-family:'Fraunces', serif;
+    font-size:1rem;
+    color:#eef1e6;
+    margin-bottom:6px;
+  }
+  .idol-flow .stage .c{
+    font-size:0.82rem;
+    color:#9cab8c;
+  }
+
+  blockquote.pull-dark{
+    margin:56px 0 0 0;
+    padding:36px 40px;
+    background:rgba(0,0,0,0.28);
+    border:1px solid rgba(238,241,230,0.16);
+    color:#eef1e6;
+    font-family:'Fraunces', serif;
+    font-size:1.3rem;
+    font-weight:400;
+    line-height:1.55;
+  }
+
+  .shift{
+    margin:32px 0 44px;
+    font-family:'Fraunces', serif;
+  }
+  .shift .old{
+    font-size:1.05rem;
+    color:#7c8a70;
+    text-decoration:line-through;
+    text-decoration-color:rgba(124,138,112,0.6);
+  }
+  .shift .new{
+    font-size:1.3rem;
+    color:var(--amber);
+    margin-top:10px;
+  }
+  .shift .arrow-down{
+    display:block;
+    color:#5f7350;
+    margin:8px 0;
+    font-size:0.9rem;
+  }
+
+  .taglist-dark span{
+    padding:8px 16px;
+    border:1px solid rgba(238,241,230,0.22);
+    border-radius:999px;
+    font-size:0.86rem;
+    color:#cfd8c2;
+    background:rgba(238,241,230,0.04);
+  }
+
+  .med-list{
+    list-style:none;
+    padding:0;
+    margin:28px 0;
+    display:grid;
+    grid-template-columns:repeat(auto-fill, minmax(260px, 1fr));
+    gap:10px 24px;
+  }
+  .med-list li{
+    font-size:0.95rem;
+    color:#d8dfcb;
+    padding-left:16px;
+    border-left:2px solid #5f7350;
+  }
+  .med-list li b{
+    display:block;
+    font-family:'Fraunces', serif;
+    color:#eef1e6;
+    font-size:1rem;
+    font-weight:500;
+  }
+
+  .caveat-box{
+    margin:24px 0 40px;
+    padding:20px 24px;
+    background:rgba(224,167,44,0.08);
+    border-left:3px solid var(--amber);
+    font-size:0.92rem;
+    color:#d8cfa9;
+    max-width:64ch;
+  }
+
+  .triad-grid{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:1px;
+    background:rgba(238,241,230,0.12);
+    border:1px solid rgba(238,241,230,0.12);
+    margin:32px 0 44px;
+  }
+  .triad-grid .panel{
+    background:#1b2c22;
+    padding:24px 22px;
+  }
+  .triad-grid .panel h4{
+    font-family:'Fraunces', serif;
+    color:var(--amber);
+    font-size:0.98rem;
+    margin-bottom:10px;
+  }
+  .triad-grid .panel p{
+    font-size:0.88rem;
+    color:#c3cdb5;
+    margin:0;
+  }
+
+  .tagline-block{
+    margin:48px 0;
+    padding:32px 0;
+    text-align:center;
+    border-top:1px solid rgba(238,241,230,0.14);
+    border-bottom:1px solid rgba(238,241,230,0.14);
+  }
+  .tagline-block .en{
+    font-family:'Fraunces', serif;
+    font-style:italic;
+    font-size:1.4rem;
+    color:#eef1e6;
+  }
+  .tagline-block .kn{
+    margin-top:16px;
+    font-family:'Fraunces', serif;
+    font-size:1.15rem;
+    color:var(--amber);
+  }
+  .tagline-block .translit{
+    margin-top:6px;
+    font-size:0.85rem;
+    color:#9cab8c;
+    font-style:italic;
+  }
+
+  .small-quote-dark{
+    margin:36px 0;
+    padding:20px 26px;
+    border-left:3px solid var(--amber);
+    font-family:'Fraunces', serif;
+    font-size:1.1rem;
+    font-style:italic;
+    color:#eef1e6;
+    max-width:60ch;
+  }
+
+  /* Chapter III — Antahkarana (inner world) */
+  .ch3{
+    background:radial-gradient(ellipse at 75% 15%, rgba(207,143,99,0.16), transparent 55%), radial-gradient(ellipse at 15% 85%, rgba(138,168,153,0.10), transparent 55%), var(--dusk);
+    color:#f0e9ec;
+  }
+  .ch3 .chapter-tag{color:var(--copper);}
+  .ch3 .lede{color:var(--lav);}
+  .ch3 .ch3-sub{color:#f0e9ec;}
+  .ch3 .ch3-sub-note{color:var(--lav);}
+  .ch3 .inner-grid{background:rgba(240,233,236,0.12); border-color:rgba(240,233,236,0.12);}
+  .ch3 .inner-grid .panel{background:#372c3f;}
+  .ch3 .inner-grid .panel h4{color:var(--copper);}
+  .ch3 .inner-grid .panel p{color:#d3c6cd;}
+  .ch3 .flow-row span{color:#e3d7dd;}
+  .ch3 .flow-row span.arrow{color:#9c7d8c;}
+  .ch3 .flow-row strong{color:var(--copper);}
+  .ch3 .shift .new{color:var(--copper);}
+  .ch3 .shift .arrow-down{color:#9c7d8c;}
+  .ch3 blockquote.small-quote-dark{border-left-color:var(--copper); background:rgba(207,143,99,0.08); color:#f0e9ec;}
+  .ch3 .taglist-dark span{border-color:rgba(240,233,236,0.24); color:var(--lav); background:rgba(240,233,236,0.04);}
+  .ch3 .closing{border-top-color:rgba(240,233,236,0.18);}
+  .ch3 .closing p{color:#dccfd6;}
+
+  .inner-grid{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:1px;
+    background:rgba(233,230,242,0.12);
+    border:1px solid rgba(233,230,242,0.12);
+    margin:56px 0;
+  }
+  .inner-grid .panel{
+    background:#1b1c33;
+    padding:32px 28px;
+  }
+  .inner-grid .panel h4{
+    font-family:'Fraunces', serif;
+    color:var(--amber);
+    font-size:1.05rem;
+    margin-bottom:10px;
+  }
+  .inner-grid .panel p{font-size:0.95rem; margin:0; color:#c8c4dc;}
+  .inner-grid.four{grid-template-columns:repeat(2, 1fr);}
+
+  .ch3-sub{
+    font-family:'Fraunces', serif;
+    font-size:1.55rem;
+    margin:78px 0 8px;
+    color:#e9e6f2;
+  }
+  .ch3-sub-note{
+    font-size:1.02rem;
+    font-weight:300;
+    max-width:56ch;
+    margin-bottom:30px;
+    color:#b7aed4;
+  }
+
+  .roles.violet .rail{background:rgba(138,168,153,0.4);}
+  .roles.violet .role::before{background:var(--sage);}
+  .roles.violet strong{color:#f0e9ec;}
+  .roles.violet .role{color:#d3c6cd; font-size:0.98rem;}
+
+  .closing{
+    margin-top:70px;
+    padding-top:50px;
+    border-top:1px solid rgba(233,230,242,0.18);
+  }
+  .closing p{font-size:1.15rem; font-weight:300; color:#d8d4e6;}
+
+  footer{
+    background:var(--ink);
+    color:#a99b7d;
+    text-align:center;
+    padding:56px 32px;
+    font-size:0.9rem;
+  }
+
+  @media (max-width:640px){
+    .weave{grid-template-columns:1fr;}
+    .inner-grid{grid-template-columns:1fr;}
+    body{font-size:16.5px;}
+    .chapter{padding:80px 0 90px;}
+  }
+</style>
+</head>
+<body>
+
+  <section class="hero">
+    <div class="hero-eyebrow-motif"><span></span><span></span><span></span></div>
+    <h1>Ganesh Chaturthi</h1>
+    <p class="tagline">The Form and Cycle</p>
+    <p class="subtitle">Told across three worlds: the neighborhood that gathers, the wilderness that lends its leaves, and the quiet inner room where the festival finally arrives.</p>
+    <div class="hero-worlds">
+      <div class="w1">I · Loukika, the Gathering</div>
+      <div class="w2">II · Bhoutika, the Wilderness</div>
+      <div class="w3">III · Antahkarana, the Inner Room</div>
+    </div>
+  </section>
+
+  <!-- CHAPTER I -->
+  <section class="chapter ch1">
+    <div class="wrap">
+      <div class="chapter-head">
+        <div class="chapter-tag"><span class="tag-main">Loukika</span><span class="tag-sub">, World One</span></div>
+        <h2 class="chapter-title">The Gathering</h2>
+        <p class="lede">Ninety families and one shared purpose make a community. No single household carries the festival — it is simply what happens when a neighborhood moves to the same ancient rhythm for ten days.</p>
+      </div>
+
+      <p>Ganesha may be worshipped quietly, in a single home. But the festival's most fundamental Loukika trait is that it does not stay there — it naturally expands outward, pulling a private act of devotion into a public act of cooperation.</p>
+
+      <div class="progression">
+        <div class="step">Individual</div><span class="arrow">→</span>
+        <div class="step">Family</div><span class="arrow">→</span>
+        <div class="step">Neighbourhood</div><span class="arrow">→</span>
+        <div class="step">Community</div><span class="arrow">→</span>
+        <div class="step">Society</div>
+      </div>
+
+      <p>At every stage along that line, people come together to decide how to celebrate, collect contributions, make or bring the murti, decorate the space, organise the puja, arrange cultural programmes, manage food, coordinate volunteers, conduct the procession, and finally organise the visarjan. The festival becomes, in effect, a social institution for collective action.</p>
+
+      <h3 class="ch1-sub">Family: the first community</h3>
+      <p class="ch1-sub-note">Before a neighbourhood ever organises anything, the household already has — and each generation carries a different part of the load.</p>
+
+      <div class="weave">
+        <div class="cell">
+          <h3>Intergenerational bonds</h3>
+          <p>Children learn stories, shlokas, songs, and the meaning of offerings — not by being told about them, but by doing them. Parents become the bridge between tradition and the next generation, while grandparents pass down family customs, local practice, and memories of how the festival used to be celebrated. The child does not merely hear about tradition; the child participates in it, which is far more powerful.</p>
+        </div>
+        <div class="cell">
+          <h3>Celebration becomes cooperation</h3>
+          <p>Cleaning, decorating, cooking, offering, praying together — small acts that still require coordination. One person prepares the flowers, another the naivedya, another decorates, another performs the puja, another cleans, another welcomes the guests. Even inside a single family, the festival teaches that a celebration is never produced by one person alone.</p>
+        </div>
+      </div>
+
+      <h3 class="ch1-sub">From family to neighbourhood</h3>
+      <p>When a neighbourhood collectively establishes its own Ganesha celebration, the scale of coordination jumps — leadership, volunteers, finances, logistics, cultural programmes, cleanliness, safety, communication all need someone's attention. People who might not otherwise interact now share a common project. Repeated year after year, this builds what could be called social capital: relationships of trust, cooperation, and reciprocity, proof that "we can accomplish something together that none of us could accomplish as easily alone."</p>
+
+      <h3 class="ch1-sub">A community, collectivising</h3>
+      <p class="ch1-sub-note">A community-run Ganesha is almost a miniature model of local governance — someone has to hold each of these threads.</p>
+      <div class="taglist">
+        <span>Accounts</span><span>Permissions</span><span>Decorations</span><span>Electricity</span>
+        <span>Sound</span><span>Food</span><span>Cultural events</span><span>Children's activities</span>
+        <span>Crowd management</span><span>Cleanliness</span><span>Volunteers</span><span>Immersion arrangements</span>
+      </div>
+      <p>In sorting all of this out, people learn how to deliberate, how to divide responsibility, how to resolve disagreements, and how to manage a shared resource toward a shared objective. The festival quietly develops civic capacity — skills that outlast the ten days by a long way.</p>
+
+      <blockquote class="small-quote">Community does not mean everyone doing the same thing. It means everyone contributing to a shared purpose.</blockquote>
+
+      <div class="roles">
+        <div class="rail"></div>
+        <div class="role">
+          <strong>Belonging</strong>
+          Modern life can be socially fragmented — neighbours who live side by side for years without truly knowing each other. A decorated pandal becomes, for a few days, a temporary community centre: children play, elders talk, new residents turn into familiar faces, and a street starts to feel like something people belong to.
+        </div>
+        <div class="role">
+          <strong>Inclusion</strong>
+          A well-organised celebration can deliberately widen its circle — toward children, senior citizens, persons with disabilities, economically weaker families, migrant families, people living alone. The question worth asking is simple: is everyone merely watching the celebration, or does everyone have a way to take part in it? That turns the festival from an event held for the community into one created by it.
+        </div>
+        <div class="role">
+          <strong>Culture, lived rather than stored</strong>
+          Classical music, bhajans, Harikatha, dance, theatre, storytelling, traditional crafts, Sanskrit shlokas, children's competitions — culture does not survive by sitting in a book. It survives because people keep practising it together. A child performing a shloka or helping decorate the pandal is not learning about culture from a distance; the child is inside it.
+        </div>
+      </div>
+
+      <h3 class="ch1-sub">Seva — celebration becomes service</h3>
+      <p class="ch1-sub-note">The bridge between this world and the next one: where Loukika starts to shade into Adhyatmika.</p>
+      <p>A community celebration can carry seva alongside it — feeding people, supporting elderly residents, helping disadvantaged families, running health camps and blood donation drives, cleaning up the neighbourhood, restoring a patch of green. The shift underneath is philosophical as much as practical: <em>"I celebrate Ganesha"</em> becomes <em>"I serve Ganesha's creation."</em> If every person is part of that larger creation, then serving the community is simply devotion, extended outward.</p>
+      <div class="taglist">
+        <span>Feeding people</span><span>Elder support</span><span>Helping disadvantaged families</span>
+        <span>Educational activities</span><span>Health camps</span><span>Blood donation</span>
+        <span>Cleanliness drives</span><span>Environmental restoration</span>
+      </div>
+
+      <h3 class="ch1-sub">Local economy, local livelihoods</h3>
+      <p>Behind every pandal is an ecosystem of livelihoods it quietly sustains — murti makers, potters, flower sellers, farmers, artisans, decorators, musicians, caterers, transport workers, electricians, event organisers, small retailers. A community celebration can choose, deliberately, to strengthen that circle: local artisans, local flowers, local food, local performers, local crafts. Done that way, the festival becomes local economic circulation rather than just an occasion for spending.</p>
+
+      <h3 class="ch1-sub">Contribution — many hands, one celebration</h3>
+      <p>A community Ganesha usually runs on contributions, small and large at once — someone gives ₹100, someone gives ₹10,000, and both are participating in the same shared institution.</p>
+      <blockquote class="small-quote">The strength of a community is not determined only by how much its richest members contribute, but by how many people feel responsible for its common life.</blockquote>
+
+      <h3 class="ch1-sub">A leadership laboratory</h3>
+      <p>Running a community celebration hands young people real responsibility, not a simulation of it. A teenager coordinating volunteers is quietly learning planning, budgeting, communication, negotiation, teamwork, accountability, crisis management — leadership experienced rather than studied. The lesson lands harder than any classroom version of it: if I take responsibility, other people depend on me.</p>
+
+      <h3 class="ch1-sub">What outlasts the pandal</h3>
+      <p>The community spends real effort building something beautiful. People gather. The festival reaches its peak. Then it ends — the pandal comes down, and the temporary space it made disappears. What should not disappear with it is the relationships built along the way.</p>
+
+      <blockquote class="pull">
+        The festival is temporary; the community it creates should endure. The murti may go into visarjan — but the friendships, the service, the cooperation, and the community spirit should remain.
+        <span>The insight from the social layer</span>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- CHAPTER II -->
+  <section class="chapter ch2">
+    <div class="wrap">
+      <div class="chapter-head">
+        <div class="chapter-tag"><span class="tag-main">Bhoutika</span><span class="tag-sub">, World Two</span></div>
+        <h2 class="chapter-title">The Wilderness</h2>
+        <p class="lede">The physical festival is a conversation with the earth, the water, and the plants that sustain life. It shows that people are not separate masters of the wild, but one thread in an interconnected chorus.</p>
+      </div>
+
+      <div class="web-diagram">
+        <div class="node"><b>The elephant</b>the grand, sweeping canopy of the forest</div>
+        <div class="node"><b>The mouse</b>the hidden, vital links in the soil</div>
+        <div class="node"><b>The snake</b>the feared but essential web of life</div>
+        <div class="node"><b>The river silt</b>the gentle loop of birth and return</div>
+      </div>
+
+      <p>It is easy to reduce this to "Ganesh Chaturthi teaches us to respect nature." The 21-patra offering asks for something more exact than that: a practical engagement with the living material world — plants, soil, water, animals, health, agriculture, and the quiet interdependence that holds them together. Taken as a set, the 21 leaves are an extraordinary cross-section of the natural world — trees, grasses, herbs, climbers, shrubs, wild plants — each carrying its own useful properties and its own ecological function. Offering them is a way of symbolically bringing the biodiversity of the surrounding ecosystem into the sacred space.</p>
+
+      <p>A plant does not merely exist — it performs functions. Durva holds soil together; a mango tree provides shade and habitat; Arjuna protects a riverbank; Shami builds fertility into arid ground. The modern language for this is <em>ecosystem services</em>, and it gives old symbolism a precise, contemporary name.</p>
+
+      <div class="shift">
+        <div class="old">"Nature is a resource for human beings."</div>
+        <span class="arrow-down">↓</span>
+        <div class="new">"Human beings are participants in a larger ecological system."</div>
+      </div>
+
+      <p>The 21 leaves (Patra) and 21 flowers (Pushpa) offered during the puja are not decoration. Gathered precisely during the damp monsoon, together they form a protective botanical shield — each plant heals the human body while serving a quiet, vital purpose in the wider web of nature around it.</p>
+
+      <h3 class="subsection-title">The 21 sacred Patra — leaves</h3>
+      <p class="subsection-note">Every leaf does double duty: a remedy in human hands, a role of its own in the wild.</p>
+      <div class="plant-grid">
+        <div class="plant-card"><span class="num">01</span><span class="glyph">🌿</span><div class="name">Machi Patram</div><div class="botanical">Artemisia vulgaris</div>
+          <p class="dual"><strong>In human hands</strong>Soothes nervous troubles, eases stomach aches, and serves as a fragrant, natural shield against insects.</p>
+          <p class="dual"><strong>In the wild</strong>Its sharp, aromatic oils keep garden pests at bay, acting as a natural guardian for surrounding plants.</p>
+        </div>
+        <div class="plant-card"><span class="num">02</span><span class="glyph">🌿</span><div class="name">Brihati Patram</div><div class="botanical">Solanum indicum</div>
+          <p class="dual"><strong>In human hands</strong>A traditional remedy to quiet severe asthma, dry coughs, and deep-seated inflammation.</p>
+          <p class="dual"><strong>In the wild</strong>Bears bright, hardy berries that feed woodland birds and small mammals through the seasons.</p>
+        </div>
+        <div class="plant-card"><span class="num">03</span><span class="glyph">🍃</span><div class="name">Bilva Patram</div><div class="botanical">Aegle marmelos</div>
+          <p class="dual"><strong>In human hands</strong>Gently coaxes erratic blood sugars into balance and serves as an excellent tonic for digestion.</p>
+          <p class="dual"><strong>In the wild</strong>Provides a home and nourishment for wild butterflies, while its deep roots help keep groundwater pure.</p>
+        </div>
+        <div class="plant-card"><span class="num">04</span><span class="glyph">🌾</span><div class="name">Durva Patram</div><div class="botanical">Cynodon dactylon</div>
+          <p class="dual"><strong>In human hands</strong>Cools inner body heat, stays minor bleeding, and soothes angry skin rashes.</p>
+          <p class="dual"><strong>In the wild</strong>Its tight, creeping roots weave a protective green blanket over the earth, holding topsoil in place against heavy rain.</p>
+        </div>
+        <div class="plant-card"><span class="num">05</span><span class="glyph">🌱</span><div class="name">Datura Patram</div><div class="botanical">Datura metel</div>
+          <p class="dual"><strong>In human hands</strong>Crushed and applied on the skin, it eases aching joints and muscle cramps — highly toxic if swallowed.</p>
+          <p class="dual"><strong>In the wild</strong>A brave pioneer plant that grows willingly in scarred, ruined soil, starting the long process of healing the land.</p>
+        </div>
+        <div class="plant-card"><span class="num">06</span><span class="glyph">🌿</span><div class="name">Badari Patram</div><div class="botanical">Ziziphus mauritiana</div>
+          <p class="dual"><strong>In human hands</strong>Restores harmony to troubled digestion, comforts raw throat infections, and cleanses the blood.</p>
+          <p class="dual"><strong>In the wild</strong>A tough, drought-proof tree that offers vital shade, shelter, and food in dry, thirsty landscapes.</p>
+        </div>
+        <div class="plant-card"><span class="num">07</span><span class="glyph">🌿</span><div class="name">Apamarga Patram</div><div class="botanical">Achyranthes aspera</div>
+          <p class="dual"><strong>In human hands</strong>Acts as a gentle flush for the system and a traditional shield against venomous insect bites.</p>
+          <p class="dual"><strong>In the wild</strong>Anchors loose gravel banks and forgotten roadsides, growing happily where other plants fail.</p>
+        </div>
+        <div class="plant-card"><span class="num">08</span><span class="glyph">🌿</span><div class="name">Tulasi Patram</div><div class="botanical">Ocimum sanctum</div>
+          <p class="dual"><strong>In human hands</strong>A powerful ally against winter colds, viruses, and lung congestion.</p>
+          <p class="dual"><strong>In the wild</strong>Functions as a tiny, living air filter, filling the courtyard with oxygen while discouraging mosquitoes.</p>
+        </div>
+        <div class="plant-card"><span class="num">09</span><span class="glyph">🌳</span><div class="name">Choota Patram</div><div class="botanical">Mangifera indica</div>
+          <p class="dual"><strong>In human hands</strong>Helps steady blood sugar and brings comfort to a dry, irritated throat.</p>
+          <p class="dual"><strong>In the wild</strong>Its massive, leafy arms shade the earth, harbour countless birds, and breathe in large amounts of carbon.</p>
+        </div>
+        <div class="plant-card"><span class="num">10</span><span class="glyph">🌺</span><div class="name">Karaveera Patram</div><div class="botanical">Nerium oleander</div>
+          <p class="dual"><strong>In human hands</strong>Historically used to treat stubborn skin wounds and sores — highly toxic if eaten.</p>
+          <p class="dual"><strong>In the wild</strong>A sturdy urban survivor that traps heavy dust and roadside smoke on its waxy leaves.</p>
+        </div>
+        <div class="plant-card"><span class="num">11</span><span class="glyph">🌿</span><div class="name">Vishnukranta Patram</div><div class="botanical">Evolvulus alsinoides</div>
+          <p class="dual"><strong>In human hands</strong>Calms a restless nervous system, brightens memory, and cools lingering fevers.</p>
+          <p class="dual"><strong>In the wild</strong>Hugs the ground closely, acting as a living mulch that keeps moisture from evaporating out of the earth.</p>
+        </div>
+        <div class="plant-card"><span class="num">12</span><span class="glyph">🌸</span><div class="name">Dadimee Patram</div><div class="botanical">Punica granatum</div>
+          <p class="dual"><strong>In human hands</strong>A reliable remedy to check severe diarrhea and calm hot, burning sensations within.</p>
+          <p class="dual"><strong>In the wild</strong>Its colourful blossoms invite clouds of busy bees and pollinators into the orchards.</p>
+        </div>
+        <div class="plant-card"><span class="num">13</span><span class="glyph">🌲</span><div class="name">Devadaru Patram</div><div class="botanical">Cedrus deodara</div>
+          <p class="dual"><strong>In human hands</strong>Reduces deep tissue swelling and helps clear congested breathing passages.</p>
+          <p class="dual"><strong>In the wild</strong>Its deep, ancient root systems hold mountain slopes together, preventing landslides and protecting clean springs.</p>
+        </div>
+        <div class="plant-card"><span class="num">14</span><span class="glyph">🌿</span><div class="name">Maruvaka Patram</div><div class="botanical">Origanum majorana</div>
+          <p class="dual"><strong>In human hands</strong>Warms away deep colds, clears the sinuses, and unties tight muscle knots.</p>
+          <p class="dual"><strong>In the wild</strong>Releases strong, fragrant signals into the breeze that naturally confuse and deter crop pests.</p>
+        </div>
+        <div class="plant-card"><span class="num">15</span><span class="glyph">🌿</span><div class="name">Sindhuvara Patram</div><div class="botanical">Vitex negundo</div>
+          <p class="dual"><strong>In human hands</strong>A trusted remedy for arthritic swelling, nerve pain, and deep body aches.</p>
+          <p class="dual"><strong>In the wild</strong>Grows into thick, living hedges that break the fury of strong winds and shield vulnerable soil.</p>
+        </div>
+        <div class="plant-card"><span class="num">16</span><span class="glyph">🌸</span><div class="name">Jaji Patram</div><div class="botanical">Jasminum officinale</div>
+          <p class="dual"><strong>In human hands</strong>Cools painful mouth ulcers, eases mental stress, and cleanses small wounds.</p>
+          <p class="dual"><strong>In the wild</strong>Offers a sweet, endless river of nectar that sustains local wild bees and butterflies.</p>
+        </div>
+        <div class="plant-card"><span class="num">17</span><span class="glyph">🍃</span><div class="name">Peruka Patram</div><div class="botanical">Psidium guajava</div>
+          <p class="dual"><strong>In human hands</strong>Provides a natural shield against microbes and balances sudden sugar spikes after meals.</p>
+          <p class="dual"><strong>In the wild</strong>Its fruits and leafy branches provide a constant sanctuary and food supply for birds and fruit bats.</p>
+        </div>
+        <div class="plant-card"><span class="num">18</span><span class="glyph">🌿</span><div class="name">Shami Patram</div><div class="botanical">Prosopis cineraria</div>
+          <p class="dual"><strong>In human hands</strong>Calms sensitive skin allergies, eases asthmatic lungs, and checks loose bowels.</p>
+          <p class="dual"><strong>In the wild</strong>Its remarkable roots reach deep to fix nitrogen, transforming dry, poor dirt into fertile soil.</p>
+        </div>
+        <div class="plant-card"><span class="num">19</span><span class="glyph">🌳</span><div class="name">Aswattha Patram</div><div class="botanical">Ficus religiosa</div>
+          <p class="dual"><strong>In human hands</strong>Purifies the bloodstream, heals hidden ulcers, and helps steady diabetes.</p>
+          <p class="dual"><strong>In the wild</strong>A foundational keystone tree whose endless cycles of wild figs feed hundreds of bird and animal species.</p>
+        </div>
+        <div class="plant-card"><span class="num">20</span><span class="glyph">🌳</span><div class="name">Arjuna Patram</div><div class="botanical">Terminalia arjuna</div>
+          <p class="dual"><strong>In human hands</strong>Protects and strengthens the heart, tones the cardiovascular system, and helps knit broken bones together.</p>
+          <p class="dual"><strong>In the wild</strong>Its heavy, water-loving roots interlock along river edges, stopping banks from crumbling into muddy floods.</p>
+        </div>
+        <div class="plant-card"><span class="num">21</span><span class="glyph">🌼</span><div class="name">Arka Patram</div><div class="botanical">Calotropis gigantea</div>
+          <p class="dual"><strong>In human hands</strong>Warm leaves ease throbbing joints, clear skin ailments, and soothe heel pain.</p>
+          <p class="dual"><strong>In the wild</strong>Flourishes in the hardest, most abandoned soils, serving as the essential nurseries for monarch butterflies.</p>
+        </div>
+      </div>
+      <p class="plant-note">Durva grass is considered the single most essential of the twenty-one, tied to the legend of easing Ganesha's stomach pain — and Tulasi, ordinarily withheld from his worship, is the one exception offered on this day alone.</p>
+
+      <h3 class="subsection-title">Nature as a pharmacy</h3>
+      <p class="subsection-note">The same plants offered in devotion turn up again in traditional medicine — sacred and useful were never really two different categories.</p>
+      <ul class="med-list">
+        <li><b>Bilva</b>a long history in traditional digestive remedies</li>
+        <li><b>Tulasi</b>traditionally valued for respiratory and antimicrobial support</li>
+        <li><b>Vishnukranti</b>associated with memory and nervous-system support</li>
+        <li><b>Arjuna</b>well known in Ayurveda for cardiovascular health</li>
+        <li><b>Sindhuvara</b>traditionally used for joint and inflammatory complaints</li>
+        <li><b>Durva</b>traditional applications in cooling and wound or bleeding care</li>
+      </ul>
+      <div class="caveat-box">These are traditional and Ayurvedic associations, not clinically established medical treatments. A few of the twenty-one — Datura and oleander in particular — are toxic, and should never be consumed or used medicinally without expert supervision. Respect for nature includes understanding its potency, its limits, and its dangers.</div>
+
+      <h3 class="subsection-title">Not 21 plants — a map of biodiversity</h3>
+      <p>Nature does not depend on any one species; an ecosystem is resilient because it is varied. A forest is not valuable simply because it has trees — it is plants, insects, birds, animals, microorganisms, soil, water, and atmosphere, interlocking.</p>
+      <div class="flow-row">
+        <span>Biodiversity</span><span class="arrow">→</span><span>Ecological resilience</span><span class="arrow">→</span><strong>Human wellbeing</strong>
+      </div>
+      <p>When a child learns the names Bilva, Durva, Tulasi, Shami, Arjuna, Ashwattha, mango, guava, pomegranate, the child starts recognising plants individually rather than as an undifferentiated backdrop — and what we recognise, we are more likely to value; what we value, we are more likely to protect. The twenty-one leaves become a small, repeatable lesson in ecological literacy, one plant at a time.</p>
+
+      <h3 class="subsection-title">The 21 sacred Pushpa — flowers</h3>
+      <p class="subsection-note">Each flower carries the same pairing in a single breath: a gift to the body, a gift to a pollinator.</p>
+      <div class="plant-grid">
+        <div class="plant-card"><span class="num">01</span><span class="glyph">🌸</span><div class="name">Mallika Pushpa</div><div class="botanical">Jasminum sambac</div>
+          <p class="dual">Relieves anxious minds; its evening scent guides night-flying moths to nectar.</p>
+        </div>
+        <div class="plant-card"><span class="num">02</span><span class="glyph">🌼</span><div class="name">Bhriga Pushpa</div><div class="botanical">Eclipta alba</div>
+          <p class="dual">Restores hair and supports the liver; offers vital sustenance to small solitary bees.</p>
+        </div>
+        <div class="plant-card"><span class="num">03</span><span class="glyph">🌸</span><div class="name">Jati Pushpa</div><div class="botanical">Jasminum grandiflorum</div>
+          <p class="dual">Soothes mouth sores; feeds beneficial bugs high up in the green branches.</p>
+        </div>
+        <div class="plant-card"><span class="num">04</span><span class="glyph">🌼</span><div class="name">Shankhapushpi</div><div class="botanical">Clitoria ternatea</div>
+          <p class="dual">Sharpens intellect; feeds the soil by capturing nitrogen from the air.</p>
+        </div>
+        <div class="plant-card"><span class="num">05</span><span class="glyph">🌺</span><div class="name">Patal Pushpa</div><div class="botanical">Stereospermum suaveolens</div>
+          <p class="dual">Cools high fevers; its trumpet-shaped petals invite long-tongued insects.</p>
+        </div>
+        <div class="plant-card"><span class="num">06</span><span class="glyph">🌺</span><div class="name">Karaveera Pushpa</div><div class="botanical">Nerium oleander</div>
+          <p class="dual">Processed by traditional healers for the heart; protects nearby greenery from being overgrazed.</p>
+        </div>
+        <div class="plant-card"><span class="num">07</span><span class="glyph">🌿</span><div class="name">Shalaparni</div><div class="botanical">Desmodium gangeticum</div>
+          <p class="dual">Calms frayed nerves and lungs; spreads across the forest floor to enrich the dirt.</p>
+        </div>
+        <div class="plant-card"><span class="num">08</span><span class="glyph">🌲</span><div class="name">Devadaru Pushpa</div><div class="botanical">Cedrus deodara</div>
+          <p class="dual">Its aromatic scent opens tight lungs; its wind-blown cones support small woodland life.</p>
+        </div>
+        <div class="plant-card"><span class="num">09</span><span class="glyph">🌸</span><div class="name">Kamala Pushpa</div><div class="botanical">Nelumbo nucifera</div>
+          <p class="dual">Cools the blood and heart; its large leaves shade the water, keeping the lake healthy and clean.</p>
+        </div>
+        <div class="plant-card"><span class="num">10</span><span class="glyph">🌼</span><div class="name">Arka Pushpa</div><div class="botanical">Calotropis gigantea</div>
+          <p class="dual">Breaks up deep chest congestion; its intricate design invites massive wild bees.</p>
+        </div>
+        <div class="plant-card"><span class="num">11</span><span class="glyph">🌼</span><div class="name">Champa Pushpa</div><div class="botanical">Magnolia champaca</div>
+          <p class="dual">Relieves dizziness; its sweet perfume masks heavy city smells.</p>
+        </div>
+        <div class="plant-card"><span class="num">12</span><span class="glyph">🌸</span><div class="name">Punnaaga Pushpa</div><div class="botanical">Calophyllum inophyllum</div>
+          <p class="dual">Soothes aching joints; grows along sandy shores, supporting coastal insect life.</p>
+        </div>
+        <div class="plant-card"><span class="num">13</span><span class="glyph">🌸</span><div class="name">Malati Pushpa</div><div class="botanical">Aganonerion polymorphum</div>
+          <p class="dual">Relieves digestive heat; its tangled vines give little birds a safe place to build nests.</p>
+        </div>
+        <div class="plant-card"><span class="num">14</span><span class="glyph">🌼</span><div class="name">Ketaki Pushpa</div><div class="botanical">Pandanus odoratissimus</div>
+          <p class="dual">Cools hot skin and headaches; its strong, stilted roots protect riverbanks from washing away.</p>
+        </div>
+        <div class="plant-card"><span class="num">15</span><span class="glyph">🌼</span><div class="name">Vakula Pushpa</div><div class="botanical">Mimusops elengi</div>
+          <p class="dual">Tightens loose teeth; its fallen, aromatic petals turn into rich food for the forest floor.</p>
+        </div>
+        <div class="plant-card"><span class="num">16</span><span class="glyph">🌹</span><div class="name">Patala / Gulab Pushpa</div><div class="botanical">Rosa damascena</div>
+          <p class="dual">A gentle skin tonic; its soft layers offer tiny insects a damp place to hide.</p>
+        </div>
+        <div class="plant-card"><span class="num">17</span><span class="glyph">🌺</span><div class="name">Ashoka Pushpa</div><div class="botanical">Saraca asoca</div>
+          <p class="dual">Supports women's health; its brilliant clusters fuel the long journeys of migrating butterflies.</p>
+        </div>
+        <div class="plant-card"><span class="num">18</span><span class="glyph">🌸</span><div class="name">Dadimi Pushpa</div><div class="botanical">Punica granatum</div>
+          <p class="dual">Soothes tired eyes; its rich red colour serves as a bright beacon for hungry birds.</p>
+        </div>
+        <div class="plant-card"><span class="num">19</span><span class="glyph">🌼</span><div class="name">Kumuda Pushpa</div><div class="botanical">Nymphaea pubescens</div>
+          <p class="dual">Eases a pounding heart; opens at night to feed the insects of the evening pond.</p>
+        </div>
+        <div class="plant-card"><span class="num">20</span><span class="glyph">🌸</span><div class="name">Yuthika Pushpa</div><div class="botanical">Jasminum auriculatum</div>
+          <p class="dual">Cleanses burns and wounds; its low, dense bushes give shelter to birds that nest on the ground.</p>
+        </div>
+        <div class="plant-card"><span class="num">21</span><span class="glyph">🌸</span><div class="name">Kunda Pushpa</div><div class="botanical">Jasminum multiflorum</div>
+          <p class="dual">Counteracts natural toxins; blooms in the cold months to feed insects when other flowers have died.</p>
+        </div>
+      </div>
+
+      <div class="flow-row">
+        <span>Leaf</span><span class="arrow">→</span><span>Plant</span><span class="arrow">→</span><span>Hidden habitat</span><span class="arrow">→</span><strong>Enriches the wilderness</strong>
+      </div>
+      <div class="flow-row">
+        <span>Flower</span><span class="arrow">→</span><span>Pollinator</span><span class="arrow">→</span><span>Seed</span><span class="arrow">→</span><span>New life</span><span class="arrow">→</span><strong>Sustains the human world</strong>
+      </div>
+
+      <h3 class="subsection-title">The return of the silt</h3>
+      <p class="subsection-note">Look again at the idol itself — it has been telling this same story from the start.</p>
+      <p>The vast elephant head, the tiny mouse at his feet, the curving snake, the wild leaves, the dark soil, the water: Ganesha's form is an ecological map of the landscape. It reminds us that size does not determine importance — the elephant needs the forest, the forest needs the birds, and the bird needs the tiny insect.</p>
+      <p>Look closer and the whole puja becomes this same meeting point, piece by piece: a human body and an elephant head; a mouse as vāhana; a murti of clay, which is earth; the water used in the ritual, which is the aquatic element; incense and lamp, which engage air, fire and fragrance; and the leaves and flowers themselves, which are the plant kingdom, brought in as offerings. Nothing here is decoration — it is human culture and the natural world, meeting at a single small altar.</p>
+
+      <div class="flow-row">
+        <span>Earth</span><span class="arrow">→</span><span>Form</span><span class="arrow">→</span><span>Worship</span><span class="arrow">→</span><span>Dissolution</span><span class="arrow">→</span><strong>Nature</strong>
+      </div>
+
+      <p>The traditional clay idol, the mṛttikā, carries this same lesson in its material. Every physical form is a temporary lease from the earth: silt is borrowed from a riverbed, shaped with affection, and eventually let go, back into the water it came from. The clay is not ultimately ours; the body is not ultimately ours; the resources we use are not ultimately ours. We receive them, transform them for a while, and return them.</p>
+
+      <div class="idol-flow">
+        <div class="stage"><div class="t">Desilting the lake</div><div class="c">Healing the water</div></div>
+        <div class="stage"><div class="t">Assessing the earth</div><div class="c">Checking for purity</div></div>
+        <div class="stage"><div class="t">Shaping the Ganesha</div><div class="c">Devotion and form</div></div>
+        <div class="stage"><div class="t">The visarjan</div><div class="c">The melting</div></div>
+        <div class="stage"><div class="t">Returning to the source</div><div class="c">The completed loop</div></div>
+      </div>
+
+      <h3 class="subsection-title">Visarjan — transformation, not destruction</h3>
+      <p>From this standpoint, nothing here is simply destroyed. Form changes — the way it changes everywhere else in nature.</p>
+      <div class="triad-grid">
+        <div class="panel"><h4>The seed</h4><p>Seed → plant → flower → fruit → seed</p></div>
+        <div class="panel"><h4>The water</h4><p>Water → cloud → rain → river → ocean → vapour</p></div>
+        <div class="panel"><h4>The soil</h4><p>Organic matter → soil → plant → food → life</p></div>
+      </div>
+      <p>Nature operates through cycles rather than permanence — and for these ten days, so does the god who visits.</p>
+
+      <blockquote class="small-quote-dark">What we know, we understand. What we understand, we value. What we value, we protect.</blockquote>
+
+      <h3 class="subsection-title">Ganesha from the lake</h3>
+      <p class="subsection-note">Trace the clay back far enough, past the potter's hands, and you reach a lake.</p>
+      <p>A traditional clay Ganesha begins with mṛttikā — earth turned, by human hands, into a sacred form: earth → clay → Ganesha. The festival can ask a second, quieter question: where does that earth actually come from?</p>
+
+      <div class="flow-row">
+        <span>Catchment</span><span class="arrow">→</span><span>Streams &amp; drains</span><span class="arrow">→</span><span>Lake</span><span class="arrow">→</span><span>Groundwater</span><span class="arrow">→</span><span>Vegetation</span><span class="arrow">→</span><strong>Human community</strong>
+      </div>
+
+      <p>A lake is rarely just a place water is stored — it is a full system, and over time sediment and silt can build up within it, reducing how much it can hold and how well it functions. Scientifically assessed, appropriately carried out desilting can become part of restoring that system, which quietly ties the festival's Earth back to the community's water.</p>
+
+      <p>Not all lake silt, however, is fit to become a Ganesha. Sediment can carry:</p>
+      <div class="taglist taglist-dark">
+        <span>Sewage-derived pollutants</span><span>Heavy metals</span><span>Industrial residues</span>
+        <span>Plastics and debris</span><span>Excessive organic matter</span>
+      </div>
+      <div class="caveat-box">Sediment needs to be tested and characterised before use. Where testing confirms it is suitable, processed sediment could potentially feed into community clay products or other restoration-linked work — but this belongs in a tested, managed circular-economy initiative, not a blanket instruction to take lake silt and start shaping idols from it.</div>
+
+      <div class="idol-flow">
+        <div class="stage"><div class="t">Restore the lake</div><div class="c">Before the festival</div></div>
+        <div class="stage"><div class="t">Recover &amp; test sediment</div><div class="c">Responsibly managed</div></div>
+        <div class="stage"><div class="t">Transform earth into Ganesha</div><div class="c">During the festival</div></div>
+        <div class="stage"><div class="t">Worship the Ganesha</div><div class="c">Ten days of attention</div></div>
+        <div class="stage"><div class="t">Return through visarjan</div><div class="c">The completed loop</div></div>
+      </div>
+
+      <div class="tagline-block">
+        <div class="en">"Ganesha from the Earth — Earth for the Lake."</div>
+        <div class="kn">ಮಣ್ಣಿನಿಂದ ಗಣೇಶ — ಕೆರೆಗೆ ನಮ್ಮ ಕೃತಜ್ಞತೆ</div>
+        <div class="translit">Maṇṇininda Gaṇeśa — Kerege Namma Kṛtajñate<br>"Ganesha from the soil — our gratitude to the lake."</div>
+      </div>
+
+      <p>Put the whole Bhoutika arc together and it reads as one continuous line, not three separate ideas about plants, clay, and water:</p>
+      <div class="flow-row">
+        <span>Earth</span><span class="arrow">→</span><span>Plants</span><span class="arrow">→</span><span>Flowers</span><span class="arrow">→</span><span>Water</span><span class="arrow">→</span><span>Life</span><span class="arrow">→</span><span>Human society</span><span class="arrow">→</span><span>Gratitude</span><span class="arrow">→</span><strong>Return</strong>
+      </div>
+
+      <p>If the murti represents the earth, we should not pollute the earth while celebrating it. If the festival celebrates plants, we should protect biodiversity. If visarjan returns the murti to water, the material should be compatible with the health of that water. Environmental responsibility, seen this way, is not a modern addition bolted onto the festival — it follows directly from understanding what the festival has been saying all along.</p>
+
+      <blockquote class="small-quote-dark">We don't merely take from nature to celebrate God. We restore nature as part of our celebration of God.</blockquote>
+
+      <blockquote class="pull-dark">
+        We cannot celebrate the creator while destroying the creation. When we replace soluble mud with toxic plaster and chemical paints, we tear the natural loop apart. The festival reminds us that the river which receives the deity is the very same water we must drink and protect.
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- CHAPTER III -->
+  <section class="chapter ch3">
+    <div class="wrap">
+      <div class="chapter-head">
+        <div class="chapter-tag"><span class="tag-main">Adhyatmika</span><span class="tag-sub">, World Three</span></div>
+        <h2 class="chapter-title">The Inner Room</h2>
+        <p class="lede">Beneath the pandal and the patra lies the reason for both: an old idea that the biggest obstacles worth removing are not outside us at all.</p>
+      </div>
+
+      <p>Ganesha is invited in as a guest, given ten days of full attention, and then walked to the water and let go. That single arc — welcome, attention, release — is the festival's quietest teaching, and it asks nothing of the crowd or the leaves to work.</p>
+
+      <div class="inner-grid">
+        <div class="panel">
+          <h4>The welcome</h4>
+          <p>Installing the idol is an act of making room — clearing a corner of the house or street for something to be fully present, if only for a while.</p>
+        </div>
+        <div class="panel">
+          <h4>The attention</h4>
+          <p>Ten days of small, repeated devotion — a lamp lit, a name chanted, a leaf offered — is a practice in sustained care, not a single grand gesture.</p>
+        </div>
+        <div class="panel">
+          <h4>The release</h4>
+          <p>Visarjan, the immersion, is not an ending so much as a rehearsal: everything gathered with love can also be let go of, without the love disappearing.</p>
+        </div>
+      </div>
+
+      <h3 class="ch3-sub">The mirror of clay</h3>
+      <p class="ch3-sub-note">Why create something so carefully only to dissolve it? Because the act itself can be a teaching.</p>
+      <p>The Ganesha murti is made from earth. It exists for a period in a particular form. Then the form dissolves, and the material returns to nature. Our own body follows the same broad principle — received from nature, lived through, and eventually returned to it.</p>
+
+      <div class="flow-row">
+        <span>Form arises</span><span class="arrow">→</span><span>Form exists</span><span class="arrow">→</span><span>Form changes</span><span class="arrow">→</span><strong>Form dissolves</strong>
+      </div>
+
+      <p>The spiritual question sits right inside that cycle: if the form changes, what is it that we truly are? Vedantic thought answers by refusing to equate the two —</p>
+
+      <div class="shift">
+        <div class="old">Body — a temporary form</div>
+        <span class="arrow-down">↓</span>
+        <div class="new">Ātman — not merely the form</div>
+      </div>
+
+      <p>The clay Ganesha becomes, in this reading, a mirror for human existence — a form we can watch arise, exist, change and dissolve from the outside, precisely because it is not us.</p>
+
+      <h3 class="ch3-sub">Buddhi, and the real obstacle</h3>
+      <p class="ch3-sub-note">Ganesha is associated with Buddhi — intelligence, understanding, discrimination. So what obstacle is he actually removing?</p>
+      <p>Not merely traffic, financial difficulty, illness, or a stalled career — at the deepest level, the greater obstacle is Avidyā, ignorance: the habit of identifying ourselves with things that are always subject to change.</p>
+      <div class="taglist taglist-dark">
+        <span>My body</span><span>My possessions</span><span>My success</span><span>My status</span>
+        <span>My achievements</span><span>My opinions</span><span>My relationships</span>
+      </div>
+      <p>The wisdom Ganesha represents invites Viveka instead — the ability to distinguish the temporary from the deeper reality beneath it. The prayer, read this way, is quietly asking for exactly that: <em>may my intellect become clear, may I distinguish the permanent from the impermanent, may I overcome ego and attachment, may I recognise the deeper reality.</em></p>
+
+      <h3 class="ch3-sub">Letting go, level by level</h3>
+      <p class="ch3-sub-note">Visarjan is not one release but several, stacked inside each other.</p>
+      <div class="roles violet">
+        <div class="rail"></div>
+        <div class="role">
+          <strong>Letting go of the object</strong>
+          We release the murti itself, the thing our hands and attention were on for ten days.
+        </div>
+        <div class="role">
+          <strong>Letting go of attachment</strong>
+          We recognise that even something made with real love cannot be kept permanently.
+        </div>
+        <div class="role">
+          <strong>Letting go of expectations</strong>
+          We offer our actions and their results, rather than insisting on a particular outcome.
+        </div>
+        <div class="role">
+          <strong>Letting go of ego</strong>
+          "I created this" turns out to be limited — the materials and the ability were themselves given to us.
+        </div>
+        <div class="role">
+          <strong>Letting go of the physical body</strong>
+          We rehearse, through the clay, the recognition that the body too is a temporary form.
+        </div>
+        <div class="role">
+          <strong>Letting go of ignorance</strong>
+          The furthest release: moving from identification with the form toward knowledge of what lies beyond it.
+        </div>
+      </div>
+
+      <blockquote class="small-quote-dark">Can I love something deeply and still be willing to let it go? That is the lesson of visarjan. It is not rejection. It is not indifference. It is non-attachment.</blockquote>
+
+      <h3 class="ch3-sub">The mouse: two readings</h3>
+      <p class="ch3-sub-note">The same small creature at Ganesha's feet says something different depending on which world you're standing in.</p>
+      <div class="inner-grid" style="grid-template-columns:repeat(2,1fr);">
+        <div class="panel">
+          <h4>Bhoutika</h4>
+          <p>Even the smallest creature has a place in the natural world — the mouse asks for the same dignity as the elephant.</p>
+        </div>
+        <div class="panel">
+          <h4>Adhyatmika</h4>
+          <p>Restless, quick, hard to control, always moving toward the next small want — the mouse becomes the mind itself, and its desires.</p>
+        </div>
+      </div>
+      <p>Ganesha riding the mouse, seen this way, becomes Buddhi guiding the mind — not destroying it, but bringing it under the guidance of wisdom.</p>
+
+      <div class="flow-row">
+        <span>Impulse → awareness</span><span class="arrow">·</span><span>Desire → discrimination</span><span class="arrow">·</span><span>Attachment → non-attachment</span><span class="arrow">·</span><span>Ignorance → knowledge</span><span class="arrow">·</span><strong>Ego → surrender</strong>
+      </div>
+
+      <h3 class="ch3-sub">Reading the rest of the form</h3>
+      <p class="ch3-sub-note">Every feature of the murti turns out to be carrying a second, quieter meaning.</p>
+      <div class="inner-grid four">
+        <div class="panel"><h4>The large ears</h4><p>A standing reminder to listen — fully, before responding.</p></div>
+        <div class="panel"><h4>The trunk</h4><p>Equally capable with the gross and the subtle: it can uproot a tree or lift a single grain.</p></div>
+        <div class="panel"><h4>The broken tusk</h4><p>Sacrifice — the willingness to give up something personal for a higher purpose.</p></div>
+        <div class="panel"><h4>The clay itself</h4><p>Impermanence, plainly stated: what has a form will eventually lose that form.</p></div>
+      </div>
+
+      <div class="closing">
+        <blockquote class="small-quote-dark">Celebrate the form, but know that you are more than the form. Love the form, but do not become imprisoned by attachment to it. Use the intellect to understand the temporary, and seek the truth beyond the temporary.</blockquote>
+        <p>Visarjan, then, is not merely the end of Ganesh Chaturthi — it is the festival's final teaching. Seen across all three worlds, the neighbourhood teaches how to hold something together, the wilderness teaches how to receive without exhausting, and the inner room teaches how to release without grief. We create. We worship. We learn. We surrender. We let go. And we carry the knowledge forward.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    Ganesh Chaturthi: The Form and Cycle — a story across community, ecology, and the inner life.
+  </footer>
+
+</body>
+</html>
